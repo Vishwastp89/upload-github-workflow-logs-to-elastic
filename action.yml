@@ -1,24 +1,21 @@
-name: "Upload GitHub Action workflows logs to elastic"
-description: "Downloads the workflow logs and uploads to Elastic"
-author: "Shahar Glazner"
+name: "Elastic job log collector"
+description: "Gets data from execution and loads to Elastic"
+author: "Angel Alberto Márquez Vargas"
 inputs:
-  github_token:
-    description: "GitHub PAT"
-  github_org:
-    description: "The github organization to read the workflows logs from"
-  github_repository:
-    description: "The github repository to read the workflows logs from"
-  github_run_id:
-    description: "The workflow specific run id to read the logs from"
-  elastic_api_key_id:
-    description: "Elastic api key id"
-  elastic_api_key:
-    description: "Elastic api key"
-  elastic_host:
-    description: "The elastic host"
-  elastic_index:
-    description: "The elastic index"
-
+  job:
+    description: "Job for execution stats to be collected"
+  github-token:
+    description: "Tocken for using the API"
+  elastic-user:
+    description: "Elastic user"
+  elastic-psw:
+    description: "Elastic psw"
+  elastic-host:
+    description: "Elastic host"    
+  elastic-port:
+    description: "Elastic port"
+  elastic-index:
+    description: "Elastic index"    
 outputs:
   result:
     description: "Result"
